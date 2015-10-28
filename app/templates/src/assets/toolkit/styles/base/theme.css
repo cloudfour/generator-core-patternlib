@@ -1,0 +1,113 @@
+/**
+ * Theme definition
+ *
+ * This defines the theme in fundamental terms, but not how it is applied to
+ * the components. That is done in `theme-map.css`.
+ */
+
+/**
+ * Misc
+ */
+
+:root {
+  --ratio: 1.5;
+}
+
+/**
+ * Colors
+ *
+ * Where possible, color names should map to standard webcolors.
+ * See: https://zaim.github.io/webcolors/
+ *
+ * Define variables for color usage (i.e., `--color-link`) in theme-map.
+ *
+ * For adjustments to existing colors (lightening, darkening) use the
+ * `color` function: https://github.com/postcss/postcss-color-function
+ */
+
+:root {
+  --color-black: black;
+  --color-blue: blue;
+  --color-gray: gray;
+  --color-green: green;
+  --color-red: red;
+  --color-white: white;
+}
+
+/**
+ * Typography
+ *
+ * 1. The root font-size that is applied to <html>.
+ * 2. The amount by which the root font-size is increased per breakpoint.
+ */
+
+:root {
+  --font-size-default: 16px; /* 1 */
+  --font-size-increment: 1px; /* 2 */
+
+  --font-size-xs: calc(1em / var(--ratio));
+  --font-size-sm: 1em;
+  --font-size-md: calc(var(--font-size-sm) * var(--ratio));
+  --font-size-lg: calc(var(--font-size-md) * var(--ratio));
+  --font-size-xl: calc(var(--font-size-lg) * var(--ratio));
+
+  --font-family-default: sans-serif;
+  --font-family-mono: monospace;
+
+  --font-weight-normal: 400;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+
+  --line-height-xs: 1;
+  --line-height-sm: calc(2 - (var(--ratio) - (1 / var(--ratio))));
+  --line-height-md: var(--ratio);
+  --line-height-lg: calc(var(--line-height-md) * var(--ratio));
+}
+
+/**
+ * Spacing
+ */
+
+:root {
+  --space-sm: calc(1rem / var(--ratio));
+  --space-md: calc(1rem * var(--ratio));
+  --space-lg: calc(var(--space-md) * var(--ratio));
+}
+
+/**
+ * Motion
+ */
+
+:root {
+  --motion-duration-sm: 100ms;
+  --motion-duration-md: 180ms;
+  --motion-duration-lg: 300ms;
+  --motion-timing-function-default: ease;
+}
+
+/**
+ * Opacity
+ */
+
+:root {
+  --opacity-low: 0.25;
+  --opacity-mid: 0.5;
+  --opacity-high: 0.75;
+}
+
+/**
+ * Selectors
+ */
+
+@custom-selector :--headings h1, h2, h3, h4, h5, h6;
+@custom-selector :--lists ul, ol, dl;
+@custom-selector :--monospaced pre, code, kbd, samp, var;
+
+/**
+ * Custom media queries
+ */
+
+@custom-media --sm-viewport (width >= 30em);
+@custom-media --md-viewport (width >= 48em);
+@custom-media --lg-viewport (width >= 64em);
+@custom-media --xl-viewport (width >= 80em);

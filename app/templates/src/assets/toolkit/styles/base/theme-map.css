@@ -1,0 +1,35 @@
+/**
+ * Base
+ */
+
+:root {
+  --base-background: var(--color-white);
+  --base-color: var(--color-black);
+  --base-font: var(--font-size-sm)/var(--line-height-md) var(--font-family-default);
+  --base-margin: var(--space-md);
+}
+
+/**
+ * Heading elements
+ */
+
+:root {
+  --heading-font: var(--font-weight-bold) var(--font-size-sm) var(--font-family-default);
+}
+
+/**
+ * Code-like elements
+ */
+
+:root {
+  --code-font: var(--font-size-sm) var(--font-family-mono);
+}
+
+/**
+ * Link
+ */
+
+:root {
+  --link-color: var(--color-blue);
+  --link-hover-color: color(var(--link-color) l(+10%));
+}

@@ -1,0 +1,36 @@
+{
+  "name": "generator-cloudfour-core-patternlib",
+  "version": "0.1.0",
+  "repository": "cloudfour/generator-core-patternlib",
+  "description": "Generate core skeleton and gulp tasks for pattern libraries",
+  "author": "The Cloud Four Team",
+  "main": "app/index.js",
+  "engines": {
+    "node": ">=0.12.0"
+  },
+  "scripts": {
+    "test": "mocha --reporter spec --timeout 3000"
+  },
+  "files": [
+    "app"
+  ],
+  "keywords": [
+    "yeoman-generator",
+    "web",
+    "app",
+    "front-end",
+    "gulp"
+  ],
+  "dependencies": {
+    "yeoman-assert": "^2.0.0",
+    "yeoman-generator": "^0.20.2",
+    "yosay": "^1.0.5"
+  },
+  "devDependencies": {
+    "babel": "^5.8.23",
+    "chai": "^3.3.0",
+    "mocha": "^2.3.3",
+    "sinon": "^1.17.1",
+    "sinon-chai": "^2.8.0"
+  }
+}

@@ -1,0 +1,57 @@
+<div class="f-Layout-nav f-Nav">
+  <div class="f-Nav-header">
+    {{! Branding goes here. }}
+  </div>
+  <ul class="f-Nav-menu">
+    <li>
+      <a class="f-Nav-item f-Nav-item--heading" href="index.html">Overview</a>
+    </li>
+    {{#each materials}}
+      <li>
+        <a class="f-Nav-item f-Nav-item--heading" href="{{@key}}.html">
+          {{toTitle name}}
+        </a>
+        <ul class="f-Nav-menu">
+          {{#each items}}
+          <li>
+            <a class="f-Nav-item" href="{{@../key}}.html#{{@key}}">
+              {{toTitle name}}
+            </a>
+          </li>
+          {{/each}}
+        </ul>
+      </li>
+    {{/each}}
+    {{#each views}}
+    <li>
+      <a class="f-Nav-item f-Nav-item--heading" href="{{@key}}.html">
+        {{toTitle name}}
+      </a>
+      <ul class="f-Nav-menu">
+        {{#each items}}
+        <li>
+          <a class="f-Nav-item" href="{{@../key}}/{{@key}}.html">
+            {{toTitle name}}
+          </a>
+        </li>
+        {{/each}}
+      </ul>
+    </li>
+    {{/each}}
+    <li>
+      <a class="f-Nav-item f-Nav-item--heading" href="docs.html">Docs</a>
+      <ul class="f-Nav-menu">
+        {{#each docs}}
+        <li>
+          <a class="f-Nav-item" href="docs.html#{{@key}}">
+            {{toTitle name}}
+          </a>
+        </li>
+        {{/each}}
+      </ul>
+    </li>
+  </ul>
+  <div class="f-Nav-footer">
+    {{! Build information goes here. }}
+  </div>
+</div>

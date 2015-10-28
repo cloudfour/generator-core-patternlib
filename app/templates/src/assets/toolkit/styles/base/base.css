@@ -1,0 +1,73 @@
+/**
+ * Resets
+ */
+
+*,
+::before,
+::after {
+  box-sizing: inherit;
+  margin: 0;
+}
+
+/**
+ * All elements in the flow of the document that proceed other elements must
+ * receive a top margin of one line.
+ *
+ * http://alistapart.com/article/axiomatic-css-and-lobotomized-owls
+ */
+
+* + * {
+  margin-top: var(--base-margin);
+}
+
+/**
+ * Page containers
+ */
+
+html {
+  height: 100%;
+}
+
+body {
+  height: inherit;
+}
+
+/**
+ * Squash additional UA styles
+ */
+
+button {
+  font: inherit;
+  background: inherit;
+}
+
+fieldset {
+  padding: 0;
+  border-style: none;
+}
+
+iframe {
+  border-style: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+th {
+  text-align: left;
+}
+
+/**
+ * Links
+ */
+
+a {
+  text-decoration: underline;
+  color: var(--link-color);
+}
+
+a:matches(:focus, :hover) {
+  color: var(--link-hover-color);
+}

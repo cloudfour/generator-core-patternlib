@@ -1,0 +1,10 @@
+title: A Pattern Library
+colors:
+  primary:
+    red: "#ff4136"
+    green: "#2ecc40"
+    blue: "#0074d9"
+  secondary:
+    white: "#fff"
+    gray: "#aaa"
+    black: "#111"

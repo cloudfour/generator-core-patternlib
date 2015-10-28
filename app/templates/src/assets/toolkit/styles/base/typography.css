@@ -1,0 +1,160 @@
+/**
+ * Root font size
+ *
+ * This is the basis for all rem and em unit calculations.
+ */
+
+html {
+  font-size: var(--font-size-default);
+}
+
+/**
+ * Increase root font-size for medium screens.
+ */
+
+@media (--md-viewport) {
+  html {
+    font-size: calc(var(--font-size-default) + var(--font-size-increment) * 1);
+  }
+}
+
+/**
+ * Increase root font-size a little more for large screens.
+ */
+
+@media (--lg-viewport) {
+  html {
+    font-size: calc(var(--font-size-default) + var(--font-size-increment) * 2);
+  }
+}
+
+/**
+ * Increase root font-size even a little more for extra-large screens.
+ */
+
+@media (--xl-viewport) {
+  html {
+    font-size: calc(var(--font-size-default) + var(--font-size-increment) * 3);
+  }
+}
+
+/**
+ * Body type styles
+ *
+ * 1. Base font style for everything
+ * 2. Prevent automatic size adjustments on orientation change
+ */
+
+body {
+  font: var(--base-font); /* 1 */
+  text-size-adjust: none; /* 2 */
+}
+
+/**
+ * Headings
+ */
+
+:--headings {
+  font: var(--heading-font);
+}
+
+/**
+ * Largest and smallest default heading sizes
+ */
+
+h1 {
+  font-size: var(--font-size-lg);
+  line-height: 1;
+}
+
+h2 {
+  font-size: var(--font-size-md);
+  line-height: 1;
+}
+
+h5,
+h6 {
+  font-size: var(--font-size-xs);
+}
+
+/**
+ * Responsive heading size increases
+ */
+
+@media (--md-viewport) {
+  h1 {
+    font-size: var(--font-size-xl);
+  }
+
+  h2 {
+    font-size: var(--font-size-lg);
+  }
+
+  h3 {
+    font-size: var(--font-size-md);
+    line-height: 1;
+  }
+}
+
+/**
+ * Small text
+ */
+
+small {
+  font-size: var(--font-size-xs);
+}
+
+/**
+ * Small caps
+ * http://typeplate.com/#small-caps
+ */
+
+abbr {
+  font-variant: small-caps;
+  text-transform: lowercase;
+}
+
+/**
+ * Use custom monospace font on all code-like elements
+ */
+
+:--monospaced {
+  font: var(--code-font);
+}
+
+/**
+ * Control whitespace and wrapping on code blocks
+ */
+
+pre,
+code {
+  white-space: pre;
+}
+
+code {
+  word-wrap: normal;
+}
+
+pre > code {
+  white-space: pre-wrap;
+}
+
+/**
+ * Lists
+ */
+
+li,
+dd {
+  margin-top: 0;
+}
+
+/**
+ * Horizontal rule
+ */
+
+hr {
+  height: 1px;
+  min-height: 1px;
+  border-style: none;
+  background-color: currentColor;
+}

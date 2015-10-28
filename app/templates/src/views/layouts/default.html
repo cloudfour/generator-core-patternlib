@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html class="no-js {{#if fabricator}}f-Layout{{/if}}">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{title}}</title>
+  {{#if fabricator}}
+    <link rel="stylesheet" href="{{baseurl}}/assets/fabricator/styles/fabricator.css">
+  {{/if}}
+  <link rel="stylesheet" href="{{baseurl}}/assets/toolkit/styles/toolkit.css">
+  {{#each stylesheets}}
+    <link rel="stylesheet" href="{{baseurl}}/assets/toolkit/styles/{{this}}.css">
+  {{/each}}
+</head>
+<body class="{{#if fabricator}}f-Layout-body{{/if}}">
+  {{#if fabricator}}
+    {{> f-icons}}
+    {{> f-nav}}
+    <div class="f-Layout-main f-u-cf">
+      {{> f-masthead}}
+      <div class="f-u-padSides f-u-padBottom">
+        {% body %}
+      </div>
+    </div>
+    <script src="{{baseurl}}/assets/fabricator/scripts/fabricator.js"></script>
+  {{else}}
+    {% body %}
+  {{/if}}
+  <script src="{{baseurl}}/assets/toolkit/scripts/toolkit.js"></script>
+</body>
+</html>

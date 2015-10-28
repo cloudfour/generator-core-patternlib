@@ -1,0 +1,10 @@
+/**
+ * Fabricator styles
+ * Class selectors are namespaced with "f-"
+ */
+
+@import "./base";
+@import "./components";
+@import "./utils";
+@import "./previews";
+@import "./vendor/prism";
