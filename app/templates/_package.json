@@ -1,6 +1,10 @@
 {
   "name": "<%= name %>",
   "version": "1.0.0",
-  "description": "A Cloud Four pattern library",
-  "devDependencies": {  }
+  "description": "<%= title %>",
+  "scripts": {
+    "build": "npm install && gulp",
+    "prestart": "npm install",
+    "start": "gulp --dev"
+  }
 }

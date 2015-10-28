@@ -1,4 +1,4 @@
-title: A Pattern Library
+title: <%= title %>
 colors:
   primary:
     red: "#ff4136"

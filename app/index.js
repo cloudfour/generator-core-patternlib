@@ -17,10 +17,17 @@ module.exports = generators.Base.extend({
         message: 'Project name for package.json',
         type: 'input',
         default: 'cloudfour-patternlib-project'
+      },
+      {
+        name: 'title',
+        message: 'Project title to be displayed in the UI',
+        type: 'input',
+        default: 'Pattern Library'
       }
     ];
     function handleAnswers (answers) {
       this.features.name = answers.name;
+      this.features.title = answers.title;
       done();
     }
     this.prompt(prompts, handleAnswers.bind(this));
@@ -58,11 +65,15 @@ module.exports = generators.Base.extend({
     fabricator: function () {
       var folders = [
         'assets',
-        'data',
         'docs',
         'materials',
         'views'
       ];
+      this.fs.copyTpl(
+        this.templatePath('src/data/toolkit.yml'),
+        this.destinationPath('src/data/toolkit.yml'),
+        this.features
+      );
       folders.forEach(function (folder) {
         this.fs.copy(
           this.sourceRoot() + '/src/' + folder + '/**',
