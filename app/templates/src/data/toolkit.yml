@@ -1,4 +1,4 @@
-title: <%= title %>
+title: <%- title %>
 colors:
   primary:
     red: "#ff4136"

@@ -1,7 +1,7 @@
 {
-  "name": "<%= name %>",
+  "name": "<%- name %>",
   "version": "1.0.0",
-  "description": "<%= title %>",
+  "description": "<%- title %>",
   "scripts": {
     "build": "npm install && gulp",
     "prestart": "npm install",
