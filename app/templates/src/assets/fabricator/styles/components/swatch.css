@@ -1,11 +1,14 @@
 .f-Swatches {
-  margin-top: 0;
   margin-bottom: 0;
   display: flex;
   padding-left: 0;
   list-style: none;
 
   flex-wrap: wrap;
+}
+
+.f-Swatches + .f-Swatches {
+  margin-top: 0;
 }
 
 .f-Swatch {
