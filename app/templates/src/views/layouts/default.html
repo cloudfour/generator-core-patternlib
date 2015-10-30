@@ -19,12 +19,14 @@
     <div class="f-Layout-main f-u-cf">
       {{> f-masthead}}
       <div class="f-u-padSides f-u-padBottom">
+  {{/if}}
+
         {% body %}
+
+  {{#if fabricator}}
       </div>
     </div>
     <script src="{{baseurl}}/assets/fabricator/scripts/fabricator.js"></script>
-  {{else}}
-    {% body %}
   {{/if}}
   <script src="{{baseurl}}/assets/toolkit/scripts/toolkit.js"></script>
 </body>
