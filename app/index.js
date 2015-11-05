@@ -36,6 +36,7 @@ module.exports = generators.Base.extend({
   writing: {
     config: function () {
       var files = {
+        'babelrc': '.babelrc',
         'browserslist': 'browserslist',
         'gitignore': '.gitignore',
         'node-version': '.node-version'
@@ -100,13 +101,12 @@ module.exports = generators.Base.extend({
 
   install: function () {
     var packages = [
-      'babel-core',
-      'babel-loader',
+      'babel-preset-es2015',
       'cloudfour/core-gulp-tasks',
       'cloudfour/core-hbs-helpers',
       'fabricator-assemble',
-      'gulp',
-      'gulp-util'
+      'gulp-util',
+      'gulp'
     ];
     this.npmInstall(packages, { 'saveDev': true });
   },
