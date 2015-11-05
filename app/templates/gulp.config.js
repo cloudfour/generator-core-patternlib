@@ -1,5 +1,6 @@
-import helpers from 'core-hbs-helpers';
+'use strict';
 
+let helpers = require('core-hbs-helpers');
 const SRC = './src';
 const DEST = './dist';
 
