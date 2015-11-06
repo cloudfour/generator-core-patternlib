@@ -56,6 +56,7 @@ describe('general', function () {
     it('invokes npmInstall for dependencies', function () {
       var callArgs = npmStub.lastCall.args;
       var expectedPackages = [
+        'babel-core',
         'babel-preset-es2015',
         'cloudfour/core-gulp-tasks',
         'cloudfour/core-hbs-helpers',
