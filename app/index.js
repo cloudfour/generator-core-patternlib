@@ -38,8 +38,7 @@ module.exports = generators.Base.extend({
       var files = {
         'babelrc': '.babelrc',
         'browserslist': 'browserslist',
-        'gitignore': '.gitignore',
-        'node-version': '.node-version'
+        'gitignore': '.gitignore'
       };
       Object.keys(files).forEach(function (key) {
         this.fs.copy(
