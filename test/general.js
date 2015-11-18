@@ -28,7 +28,8 @@ describe('general', function () {
         'gulp.config.js',
         'gulpfile.babel.js',
         '.gitignore',
-        '.node-version'
+        '.node-version',
+        '.babelrc'
       ]);
     });
 
@@ -56,7 +57,7 @@ describe('general', function () {
       var callArgs = npmStub.lastCall.args;
       var expectedPackages = [
         'babel-core',
-        'babel-loader',
+        'babel-preset-es2015',
         'cloudfour/core-gulp-tasks',
         'cloudfour/core-hbs-helpers',
         'fabricator-assemble',

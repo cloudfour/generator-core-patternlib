@@ -1,9 +1,11 @@
+'use strict';
+
 import assemble from 'fabricator-assemble';
 import config from './gulp.config.js';
 import gulp from 'gulp';
-import tasks from 'core-gulp-tasks';
-import utils from 'gulp-util';
 
+let tasks = require('core-gulp-tasks');
+let utils = require('gulp-util');
 let env = utils.env;
 
 /* Register core tasks */
