@@ -28,7 +28,6 @@ describe('general', function () {
         'gulp.config.js',
         'gulpfile.babel.js',
         '.gitignore',
-        '.node-version',
         '.babelrc'
       ]);
     });
