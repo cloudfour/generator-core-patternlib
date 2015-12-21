@@ -101,6 +101,7 @@ module.exports = generators.Base.extend({
   install: function () {
     var packages = [
       'babel-core',
+      'babel-loader',
       'babel-preset-es2015',
       'cloudfour/core-gulp-tasks',
       'cloudfour/core-hbs-helpers',
