@@ -38,7 +38,7 @@ let config = {
           loaders: [
             {
               test: /\.js$/,
-              loaders: ['babel'],
+              loaders: ['babel-loader'],
               presets: ['es2015']
             }
           ]
