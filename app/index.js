@@ -103,6 +103,7 @@ module.exports = generators.Base.extend({
       'babel-core',
       'babel-loader',
       'babel-preset-es2015',
+      'classlist',
       'cloudfour/core-gulp-tasks',
       'cloudfour/core-hbs-helpers',
       'fabricator-assemble',

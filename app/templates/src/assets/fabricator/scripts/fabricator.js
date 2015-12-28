@@ -1,5 +1,6 @@
 'use strict';
 
+var ClassList = require('classlist');
 require('./prism');
 
 /**
@@ -85,7 +86,7 @@ fabricator.setActiveItem = function () {
 		for (var i = fabricator.dom.menuItems.length - 1; i >= 0; i--) {
 
 			// remove active class from items
-			fabricator.dom.menuItems[i].classList.remove('f-is-active');
+			fabricator.toggleClass(fabricator.dom.menuItems[i], 'f-is-active', false);
 
 			// get item href
 			href = fabricator.dom.menuItems[i].getAttribute('href');
@@ -131,7 +132,7 @@ fabricator.setActiveItem = function () {
 		index = (items.indexOf(id) > -1) ? items.indexOf(id) : 0;
 
 		// set the matched item as active
-		fabricator.dom.menuItems[index].classList.add('f-is-active');
+		fabricator.toggleClass(fabricator.dom.menuItems[index], 'f-is-active', true);
 
 	};
 
@@ -173,7 +174,7 @@ fabricator.setToggleOption = function (toggleType, state) {
 };
 
 fabricator.toggleClass = function (element, className, state) {
-	let classList = element.classList;
+	let classList = element.classList || ClassList(element);
 	switch (state) {
 		case true:
 			classList.add(className);
@@ -205,7 +206,7 @@ fabricator.singleItemToggle = function () {
 		var group = this.parentNode.parentNode.parentNode,
 			type = e.currentTarget.getAttribute('data-f-toggle-control');
 		e.preventDefault();
-		group.querySelector('[data-f-toggle=' + type + ']').classList.toggle('f-u-hidden');
+		fabricator.toggleClass(group.querySelector('[data-f-toggle=' + type + ']'), 'f-u-hidden');
 	};
 
 	for (var i = 0; i < itemToggleSingle.length; i++) {
