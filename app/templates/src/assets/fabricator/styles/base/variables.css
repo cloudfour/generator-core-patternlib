@@ -3,9 +3,11 @@
 
   --Item-border: #ccc;
 
-  --Nav-background: #444;
+  --Nav-background: #fff;
   --Nav-hover-background: #333;
-  --Nav-color: #fff;
+  --Nav-border: var(--Item-border);
+  --Nav-active-color: inherit;
+  --Nav-active-border: currentColor;
 
   --Label-inprogress: #ffd739;
   --Label-deprecated: #ff4136;

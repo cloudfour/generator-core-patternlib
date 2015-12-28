@@ -1,30 +1,92 @@
 .f-Nav {
-  color: var(--Nav-color);
-  background-color: var(--Nav-background);
+  background: var(--Nav-background);
+  border-color: var(--Nav-border);
+  border-style: solid;
+  border-width: 0 0 1px;
+  margin: 0;
+}
+
+@media (--large-viewport) {
+  .f-Nav {
+    border-width: 0 1px 0 0;
+  }
 }
 
 .f-Nav a,
 .f-Nav a:matches(:focus, :hover, :active) {
   text-decoration: none;
-  color: inherit;
 }
 
 .f-Nav-header {
-  margin: 0.5rem 1rem;
+  margin: 0;
+  padding: 1rem;
+  position: relative;
 }
 
-.f-Nav-header svg {
-  width: 2rem;
-  height: 2rem;
+.f-Nav-header-logo {
+  font-weight: bold;
+  margin: 0;
+}
 
+.f-Nav-header-logo > img {
+  vertical-align: bottom;
+}
+
+.f-Nav-header-toggle {
+  background: transparent;
+  border: 0;
+  box-shadow: none;
+  cursor: pointer;
+  font: inherit;
+  margin: -1.5em 0 0;
+  padding: 1em;
+  position: absolute;
+  top: 50%;
+  right: 0;
+}
+
+.f-Nav.f-is-open .f-Nav-header-toggle {
+  transform: rotate(180deg);
+}
+
+@media (--large-viewport) {
+  .f-Nav-header-toggle {
+    display: none;
+  }
+}
+
+.f-Nav-header-toggle svg {
+  display: block;
   fill: currentColor;
+  height: 1em;
+  opacity: 0.5;
+  width: 1em;
+}
+
+.f-Nav-main {
+  display: none;
+  margin: 0;
+}
+
+.f-Nav.f-is-open .f-Nav-main {
+  display: block;
+}
+
+@media (--large-viewport) {
+  .f-Nav-main {
+    display: block;
+    padding-bottom: 3rem; /* room for tota11y */
+  }
 }
 
 .f-Nav-menu {
-  margin-top: 0;
-  margin-bottom: 0;
-  padding-left: 0;
+  margin: 0 0 1rem;
+  padding: 0;
   list-style: none;
+}
+
+.f-Nav-menu .f-Nav-menu {
+  margin-bottom: 0;
 }
 
 .f-Nav-menu > li {
@@ -32,32 +94,19 @@
 }
 
 .f-Nav-item {
+  border-color: transparent;
+  border-style: solid;
+  border-width: 0 0 0 0.25rem;
   display: block;
-  padding: 0.5rem 1rem;
-  font-size: 0.75rem;
+  padding: 0.5rem 1rem 0.5rem 0.75rem;
 }
 
 .f-Nav-menu .f-Nav-menu .f-Nav-item {
-  padding-left: 2rem;
+  font-size: 0.875em;
+  padding-left: 1.875rem;
 }
 
 .f-Nav-item.f-is-active {
-  box-shadow: 3px 0 0 var(--Nav-color) inset;
-}
-
-.f-Nav-item:hover,
-.f-Nav-item:focus {
-  background-color: var(--Nav-hover-background);
-}
-
-.f-Nav-item--heading {
-  margin-top: 0.75rem;
-  font-size: 1rem;
-  font-weight: 300;
-}
-
-.f-Nav-footer {
-  margin: 2rem 1rem 1rem;
-  font-size: 0.75rem;
-  opacity: 0.5;
+  border-color: var(--Nav-active-border);
+  color: var(--Nav-active-color);
 }
