@@ -21,7 +21,6 @@
     box-sizing: border-box;
     width: var(--Layout-nav-width);
     height: 100%;
-    margin: 0;
 
     -webkit-overflow-scrolling: touch;
   }
